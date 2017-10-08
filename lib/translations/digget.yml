@@ -1,0 +1,3 @@
+en:
+  digget:
+    error_type: "The parameter `%{param}` cannot be converted to type `%{type}`"
