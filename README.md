@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/pielambr/digget/branch/master/graph/badge.svg)](https://codecov.io/gh/pielambr/digget)
+[![Build Status](https://travis-ci.org/pielambr/digget.svg?branch=master)](https://travis-ci.org/pielambr/digget)
 # Digget
 Short description and motivation.
 
