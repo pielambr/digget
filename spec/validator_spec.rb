@@ -10,26 +10,23 @@ module Digget
     end
 
     before(:each) do
-      @validator = IntegerValidator.new({ id: "3" })
+      @validator = IntegerValidator.new({ id: '3' })
       @validator.validate
     end
 
-    it "tests if a validator starts out with no errors" do
+    it 'tests if a validator starts out with no errors' do
       expect(@validator.errors).to be_empty
     end
 
-    it "tests whether an integer gets correctly casted out of the params" do
+    it 'tests whether an integer gets correctly casted out of the params' do
       expect(@validator.casted_params[:id]).to eq(3)
     end
 
-    it "tests whether a cast error results in a translated error being saved" do
-      validator = IntegerValidator.new({ id: "abc" })
+    it 'tests whether a cast error results in a translated error being saved' do
+      validator = IntegerValidator.new(id: 'abc')
       validator.validate
       expect(validator.errors.length).to eq(1)
-      expect(validator.is_valid?).to eq(false)
+      expect(validator.valid?).to eq(false)
     end
   end
 end
-
-
-

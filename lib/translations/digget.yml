@@ -1,3 +1,9 @@
 en:
   digget:
-    error_type: "The parameter `%{param}` cannot be converted to type `%{type}`"
+    cast: "The parameter `%{param}` cannot be converted to type `%{type}`"
+    required: "The parameter `%{name}` is required"
+    min: "The parameter `%{name}` should be at least %{value}"
+    max: "The parameter `%{name}` can be %{value} at most"
+    min_length: "The parameter `%{name}` should have a length of at least %{value}"
+    max_length: "The parameter `%{name}` should have a length of %{value} at most"
+    length: "The parameter `%{name}` should have a length of %{value}"
