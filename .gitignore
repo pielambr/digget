@@ -10,3 +10,4 @@ doc/
 Gemfile.lock
 .idea/
 .yardoc/
+coverage/
