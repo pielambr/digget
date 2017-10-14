@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.3.1
+cache:
+  bundler: true
+install:
+- bundle install --jobs=3
+script:
+- rake spec
+before_deploy:
+- rake yard
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: doc
+  on:
+    branch: master
