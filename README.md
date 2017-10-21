@@ -1,6 +1,7 @@
 [![codecov](https://codecov.io/gh/pielambr/digget/branch/master/graph/badge.svg)](https://codecov.io/gh/pielambr/digget)
 [![Build Status](https://travis-ci.org/pielambr/digget.svg?branch=master)](https://travis-ci.org/pielambr/digget)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2351e4afa1f24e16af9c576bc619ea40)](https://www.codacy.com/app/pielambr/digget?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pielambr/digget&amp;utm_campaign=Badge_Grade)
+[![Gem Version](https://badge.fury.io/rb/digget.svg)](https://badge.fury.io/rb/digget)
 # Digget
 Short description and motivation.
 
