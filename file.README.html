@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.9
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<p><a href="https://codecov.io/gh/pielambr/digget"><img
+src="https://codecov.io/gh/pielambr/digget/branch/master/graph/badge.svg"></a>
+<a href="https://travis-ci.org/pielambr/digget"><img
+src="https://travis-ci.org/pielambr/digget.svg?branch=master"></a> <a
+href="https://www.codacy.com/app/pielambr/digget?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pielambr/digget&amp;utm_campaign=Badge_Grade"><img
+src="https://api.codacy.com/project/badge/Grade/2351e4afa1f24e16af9c576bc619ea40"></a>
+<a href="https://badge.fury.io/rb/digget"><img
+src="https://badge.fury.io/rb/digget.svg"></a></p>
+
+<h1 id="label-Digget">Digget</h1>
+
+<p>This gem aims to make for an easier search API by validating incoming
+parameters and filtering your model accordingly.</p>
+
+<p><strong>Note</strong>: this gem is under <em>very early</em> development
+and is not finished in any way</p>
+
+<h2 id="label-Usage">Usage</h2>
+
+<h3 id="label-Validating+of+parameters">Validating of parameters</h3>
+
+<p>The only thing you have to do is extends the Validator class, so you can
+use the <code>verify</code> method. “`ruby class YourValidator &lt;
+Digget::Validator  def validate_id_params  verify :id, Integer, max: 100,
+min: 50  end</p>
+
+<p>def validate_search_params  verify :name, String, required: true  verify
+:size, Float, required: true, min: 15  end end <code> To validate the
+`params` you need to run the validator; </code>ruby validator =
+YourValidator.new(params) validator.validate_id_params <code> You can then
+see if there are any errors during validation </code>ruby validator.errors
+<code> You can also get a Hash with the parameters casted to the right
+datatype; </code>ruby validator.casted_params “`</p>
+
+<h4 id="label-Supported+datatypes">Supported datatypes</h4>
+<ul><li>
+<p>Float</p>
+</li><li>
+<p>Integer</p>
+</li><li>
+<p>String</p>
+</li><li>
+<p>Date</p>
+</li><li>
+<p>Time</p>
+
+<h4 id="label-Supported+validation+options">Supported validation options</h4>
+
+<p>All of the following options can be combined</p>
+</li><li>
+<p><strong>required</strong> (checks whether the parameter is present)</p>
+</li><li>
+<p><strong>min</strong> (checks whether the parameter is larger than the
+provided value)</p>
+</li><li>
+<p><strong>max</strong> (checks whether the parameter is lower than the
+provided value)</p>
+</li><li>
+<p><strong>min_length</strong> (checks whether the parameter is longer than
+this)</p>
+</li><li>
+<p><strong>max_length</strong> (checks whether the parameter is shorter than
+this)</p>
+</li><li>
+<p><strong>length</strong> (checks whether the parameter has this exact
+length)</p>
+</li><li>
+<p><strong>equal</strong> (check whether the parameter is equal to the
+provided value)</p>
+</li><li>
+<p><strong>not_equal</strong> (checks whether the parameter is not equal to
+the provided value)</p>
+</li></ul>
+
+<h2 id="label-Installation">Installation</h2>
+
+<p>Add this line to your application&#39;s Gemfile:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>digget</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>And then execute: <code>bash $ bundle </code></p>
+
+<p>Or install it yourself as: <code>bash $ gem install digget </code></p>
+
+<h2 id="label-License">License</h2>
+
+<p>The gem is available as open source under the terms of the <a
+href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Sat Oct 21 15:01:45 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.9 (ruby-2.3.1).
+</div>
+
+    </div>
+  </body>
+</html>
