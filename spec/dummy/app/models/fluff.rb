@@ -1,0 +1,2 @@
+class Fluff < ApplicationRecord
+end
