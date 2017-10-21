@@ -7,3 +7,5 @@ en:
     min_length: "The parameter `%{name}` should have a length of at least %{value}"
     max_length: "The parameter `%{name}` should have a length of %{value} at most"
     length: "The parameter `%{name}` should have a length of %{value}"
+    equal: "The parameter `%{name}` should have be equal to %{value}"
+    not_equal: "The parameter `%{name}` should not be equal to %{value}"

@@ -83,6 +83,12 @@ module Digget
         elsif key == :max && !param.nil?
           next unless param > value
           @errors.append(I18n.t('digget.max', name: name, value: value))
+        elsif key == :equal && !param.nil
+          next unless param != value
+          @errors.append(I18n.t('digget.equal', name: name, value: value))
+        elsif key == :not_equal && !param.nil
+          next unless param == value
+          @errors.append(I18n.t('digget.not_equal', name: name, value: value))
         elsif key == :min_length && !param.nil?
           next unless param.length < value
           @errors.append(I18n.t('digget.min_length', name: name, value: value))
